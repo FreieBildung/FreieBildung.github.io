@@ -192,6 +192,8 @@
 <p>Dieses ebook stellt die vom Servicenetzwerk unterstützten Abläufe vor.</p>
 <p><img src="book-assets/gliederung.png" alt="Gliederung der Services" /></p>
 <p>Momentan liegt der Fokus auf den Leistungsprozessen zur Finanzverwaltung, die für die teilnehmenden Schulen essenziell sind.</p>
+<p>Die Prozessversorgung wird durch Standardsysteme digital sichergestellt und durch die Mitarbeiterinnen der Genossenschaft betreut. Die Schulen können sich somit auf ihre pädagogische Arbeit konzentrieren. Die folgende Abbildung zeigt die Prozessversorgung durch das Servicenetzwerk.</p>
+<p><img src="book-assets/bigpicture.png" alt="Aufbau der Prozessversorgung mit Systemen" /></p>
 <p>Weitere Leistungsprozesse sind in Planung.</p>
 <p>Das Handbuch ist noch im Aufbau und wird sich in der Weiterentwicklung immer wieder ändern.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="prozess-schnittstelle"><a class="header" href="#prozess-schnittstelle">Prozess-Schnittstelle</a></h1>
@@ -339,7 +341,50 @@ openFromUrl('./mahnwesen.bpmn');
 <li><strong><a href="leistungsprozesse/finanzverwaltung/kreditorenbuchhaltung/zahlungsverkehr.html">Zahlungsverkehr</a></strong></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="belegeingang"><a class="header" href="#belegeingang">Belegeingang</a></h1>
-<h3 id="prozessablauf-5"><a class="header" href="#prozessablauf-5">Prozessablauf</a></h3>
+<h2 id="beteiligte-1"><a class="header" href="#beteiligte-1">Beteiligte</a></h2>
+<ul>
+<li>Lieferant</li>
+<li>Verwaltung</li>
+<li>Besteller - zuständige Abteilung</li>
+<li>Buchhaltung</li>
+</ul>
+<h2 id="der-ideale-prozess-1"><a class="header" href="#der-ideale-prozess-1">Der ideale Prozess</a></h2>
+<h3 id="ablauf-1"><a class="header" href="#ablauf-1">Ablauf</a></h3>
+<ul>
+<li>Die Verwaltung Schule erhält eine Rechnung.</li>
+<li>Die Verwaltung digitalisiert die Rechnung, wenn sie als Papier ankommt.</li>
+<li>Die Verwaltung lädt den digitalen Beleg ins Dokumentenmanagement der Buchhaltung.</li>
+<li>Die Verwaltung dokumentiert den Verwendungszweck des Belegs im Dokumentenmanagement.</li>
+<li>Die Verwaltung prüft den Beleg nach UStG §14 (z.B. Adressat, Datum, Umsatzsteuer etc.).
+<ul>
+<li>Sofern die Rechnung fehlerhaft ist, fordert die Verwaltung eine Rechnungskorrektur an.</li>
+</ul>
+</li>
+<li>Der Besteller prüft die Rechnung auf sachliche und rechnerische Richtigkeit.
+<ul>
+<li>Sofern die Rechnung fehlerhaft ist, übergibt der Besteller sie mit Gründen zurück an die Verwaltung. Die Verwaltung fordert eine Korrektur an.</li>
+</ul>
+</li>
+<li>Die Besteller gibt die Rechnung frei.
+<ul>
+<li>Bei Überschreitung eines Freigabebetrages prüft ein Vorgesetzter die Rechnung ebenfalls.</li>
+</ul>
+</li>
+<li>Die Buchhaltung bucht den Beleg kreditorisch.</li>
+</ul>
+<h3 id="schnittstellen"><a class="header" href="#schnittstellen">Schnittstellen</a></h3>
+<h3 id="regelungen-1"><a class="header" href="#regelungen-1">Regelungen</a></h3>
+<h3 id="voraussetzungen-1"><a class="header" href="#voraussetzungen-1">Voraussetzungen</a></h3>
+<h3 id="prozessfehler-1"><a class="header" href="#prozessfehler-1">Prozessfehler</a></h3>
+<h3 id="prozesskennzahlen-1"><a class="header" href="#prozesskennzahlen-1">Prozesskennzahlen</a></h3>
+<ul>
+<li>Wie viele Rechnungen werden angemahnt?</li>
+<li>Wie viel Skontoverlust wegen verspäteter Zahlung ist entstanden?</li>
+<li>Wie viele Rechnungen müssen storniert werden wegen Fehlbuchungen?</li>
+<li>Wie viele Rechnungen werden insgesamt gebucht?</li>
+<li>Wie lange ist die durchschnittliche Durchlaufzeit pro Rechnung? </li>
+</ul>
+<h2 id="prozessablauf-5"><a class="header" href="#prozessablauf-5">Prozessablauf</a></h2>
 <style>#js-canvas { background-color: #eeeeee; } </style>
 <div class="canvas"><div id="js-canvas"></div></div>
 <script>
@@ -437,8 +482,8 @@ openFromUrl('./lohnauswertung.bpmn');
 <li>Autorin</li>
 <li>Redakteurin</li>
 </ul>
-<h2 id="der-ideale-prozess-1"><a class="header" href="#der-ideale-prozess-1">Der ideale Prozess</a></h2>
-<h3 id="ablauf-1"><a class="header" href="#ablauf-1">Ablauf</a></h3>
+<h2 id="der-ideale-prozess-2"><a class="header" href="#der-ideale-prozess-2">Der ideale Prozess</a></h2>
+<h3 id="ablauf-2"><a class="header" href="#ablauf-2">Ablauf</a></h3>
 <ul>
 <li>
 <p>Autorinnen schreiben in Markdown und speichern im github-Repository <strong>Organisationsentwicklung</strong> in den Branch <em>develop</em>. Sie können lokal ihre Änderungen testen, wenn ihr System dafür eingerichtet ist.</p>
@@ -450,18 +495,18 @@ openFromUrl('./lohnauswertung.bpmn');
 <p>Die verantwortliche Redakteurin kann die Seite auf die offizielle Website übernehmen. Dies erfolgt zurzeit über den manuellen Start des Produktionsworkflows &quot;Run Workflow&quot; <a href="https://github.com/FreieBildung/Organisationsentwicklung/actions/workflows/deploy_pages.yml">auf dieser Seite</a>. Dabei kann der Workflow vom Branch &quot;develop&quot; (ungeprüft) oder &quot;staging&quot; (geprüft) die Daten lesen. Das System publiziert nun automatisch nach <a href="https://www.servicenetzwerk-freie-bildung.de">https://www.servicenetzwerk-freie-bildung.de</a>.</p>
 </li>
 </ul>
-<h3 id="regelungen-1"><a class="header" href="#regelungen-1">Regelungen</a></h3>
+<h3 id="regelungen-2"><a class="header" href="#regelungen-2">Regelungen</a></h3>
 <ul>
 <li>Organisatorische Festlegung, wer wann vor der Publikation prüft.</li>
 </ul>
-<h3 id="voraussetzungen-1"><a class="header" href="#voraussetzungen-1">Voraussetzungen</a></h3>
+<h3 id="voraussetzungen-2"><a class="header" href="#voraussetzungen-2">Voraussetzungen</a></h3>
 <ul>
 <li>Prozessteilnehmerinnen haben Zugriff auf das github-Projekt und sind in die Abläufe eingewiesen.</li>
 </ul>
-<h3 id="prozessfehler-1"><a class="header" href="#prozessfehler-1">Prozessfehler</a></h3>
+<h3 id="prozessfehler-2"><a class="header" href="#prozessfehler-2">Prozessfehler</a></h3>
 <p>Prozessfehler führen zu einem gescheiterten Workflow oder einem unerwünschten Ergebnis auf der Website.
 Die Prozessfehler können auf der <a href="https://github.com/FreieBildung/Organisationsentwicklung/actions">Github-Seite zu Actions</a> gesehen und untersucht werden. Der häufigste Fehler liegt in ungültigen Verweisen ausgehend von der SUMMARY.md Datei.</p>
-<h3 id="prozesskennzahlen-1"><a class="header" href="#prozesskennzahlen-1">Prozesskennzahlen</a></h3>
+<h3 id="prozesskennzahlen-2"><a class="header" href="#prozesskennzahlen-2">Prozesskennzahlen</a></h3>
 <ul>
 <li>Anzahl der Prüfungen</li>
 <li>Anzahl der Produktionsdeployments</li>
@@ -562,7 +607,7 @@ Das ist ein Text nach dem Diagramm.
 <li>Aufnahme von Partnerangeboten in die Service-Leistungen</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="weitere-schulprozesse"><a class="header" href="#weitere-schulprozesse">Weitere Schulprozesse</a></h1>
-<h2 id="beteiligte-1"><a class="header" href="#beteiligte-1">Beteiligte</a></h2>
+<h2 id="beteiligte-2"><a class="header" href="#beteiligte-2">Beteiligte</a></h2>
 <ul>
 <li>GeschäftsführerIn</li>
 <li>DirektorIn/SchulleiterIn</li>
